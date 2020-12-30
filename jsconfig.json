@@ -1,0 +1,20 @@
+/*
+ * @Author: 庞泽邦 
+ * @Date: 2020-05-18 19:58:47 
+ * @Last Modified by: 庞泽邦
+ * @Last Modified time: 2020-05-18 19:59:08
+ */
+ //配置识别webpack alias
+ {
+    "compilerOptions": {
+      "baseUrl": ".",
+      "paths": {
+        "@/*": ["src/*"]
+      },
+      "target": "ES6",
+      "module": "commonjs",
+      "allowSyntheticDefaultImports": true
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules"]
+  }
