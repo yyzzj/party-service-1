@@ -56,14 +56,14 @@ const config = {
       entry: 'src/pages/student/main.js',
       template: 'src/pages/student/student.html',
       filename: 'index.html',
-      title: '健康书院-学生端',
+      title: '社区服务站-学生端',
       chunks: ['chunk-vendors', 'chunk-common', 'runtime', 'student', 'chunk-libs', 'student~teacher']
     },
     teacher: {
       entry: 'src/pages/teacher/main.js',
       template: 'src/pages/teacher/teacher.html',
       filename: 'teacher.html',
-      title: '健康书院-教师端',
+      title: '社区服务站-教师端',
       chunks: ['chunk-vendors', 'chunk-common', 'runtime', 'teacher', 'chunk-libs', 'student~teacher']
     }
   },
@@ -119,7 +119,7 @@ const config = {
         }
       }
     },
-    // before: require('./mock/mock-server.js')
+    before: require('./mock/mock-server.js')
   },
   chainWebpack(config) {
     // 代码最小化
