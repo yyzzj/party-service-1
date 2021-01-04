@@ -1,8 +1,8 @@
 /*
  * @Author: 庞泽邦
  * @Date: 2020-05-01
- * @Last Modified by: 庞泽邦
- * @Last Modified time: 2020-12-05 14:17:31
+ * @Last Modified by: 吴晓斌
+ * @Last Modified time: 2021-01-04 14:36:21
  */
 //学生端底部嵌套路由导航栏
 <template>
@@ -21,15 +21,15 @@
           </template>
         </van-tabbar-item>
         <van-tabbar-item to="/select">
-          <span>选课</span>
+          <span>课程</span>
           <template #icon>
-            <van-icon slot="icon" class-prefix="old-icon" name="fenlei" size="25" />
+            <van-icon slot="icon" class-prefix="old-icon" name="shuji" size="25" />
           </template>
         </van-tabbar-item>
         <van-tabbar-item to="/healthy">
-          <span>健康</span>
+          <span>活动</span>
           <template #icon>
-            <van-icon slot="icon" class-prefix="old-icon" name="jiankang" size="25" />
+            <van-icon slot="icon" class-prefix="old-icon" name="fenlei" size="25" />
           </template>
         </van-tabbar-item>
         <van-tabbar-item to="/user">

@@ -1,8 +1,8 @@
 /*
  * @Author: 庞泽邦
  * @Date: 2020-05-01
- * @Last Modified by: 庞泽邦
- * @Last Modified time: 2020-12-03 10:38:46
+ * @Last Modified by: 吴晓斌
+ * @Last Modified time: 2021-01-04 16:57:21
  */
 //学生端首页页面
 <template>
@@ -10,7 +10,7 @@
     <van-sticky class="van-sticky--fixed">
       <van-row class="home_header--container" type="flex" justify="center" align="center">
         <van-col span="6">
-          <div class="home_header--title">健康书院</div>
+          <div class="home_header--title">社区服务站</div>
         </van-col>
         <van-col span="18">
           <div class="home_header--search">
@@ -24,25 +24,33 @@
         </van-col>
       </van-row>
     </van-sticky>
-    <div class="swipr_wrap--container">
+    <public-video />
+    <!-- <div class="swipr_wrap--container">
       <van-swipe :autoplay="3000" height="155" indicator-color="#6C6C6C" stop-propagation>
         <van-swipe-item v-for="(image, index) in images" :key="index">
           <van-image v-lazy="image" height="150" :src="image" fit="fill" />
         </van-swipe-item>
       </van-swipe>
-    </div>
-    <user-gird />
-    <free-recommend />
+    </div> -->
+    <van-notice-bar
+      left-icon="volume-o"
+      mode="closeable"
+      background="#fff"
+      color="#A12831"
+    >社区公告：这是一条测试公告...</van-notice-bar>
+    <community-service />
+    <community-activity />
     <hot-recommend />
   </div>
 </template>
 
 <script>
 import Vue from 'vue'
-import { Col, Row, Search, Swipe, SwipeItem, Lazyload, Image as VanImage, Sticky, Icon } from 'vant'
-import userGird from '../../components/Home/userGird'
-import freeRecommend from '../../components/Home/freeRecommend'
-import hotRecommend from '../../components/Home/hotRecommend'
+import { Col, Row, Search, Swipe, SwipeItem, Lazyload, Image as VanImage, Sticky, Icon, NoticeBar } from 'vant'
+import Video from '@/components/Video'
+import communityService from '../../components/Home/communityService'
+import communityActivity from '../../components/Home/communityActivity'
+import hotRecommend from '../../components/Home/hotRecommend.vue'
 
 Vue.use(Col)
   .use(Row)
@@ -53,19 +61,21 @@ Vue.use(Col)
   .use(VanImage)
   .use(Sticky)
   .use(Icon)
+  .use(NoticeBar)
 export default {
   name: 'Home',
   components: {
-    'userGird': userGird,
-    'freeRecommend': freeRecommend,
-    'hotRecommend': hotRecommend
+    'public-video': Video,
+    'hotRecommend': hotRecommend,
+    'communityService': communityService,
+    'communityActivity': communityActivity
   },
   data: () => {
     return {
       value: '',
       images: [
-        'https://img.yzcdn.cn/vant/apple-1.jpg',
-        'https://img.yzcdn.cn/vant/apple-2.jpg'
+        'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2255943622,3958558387&fm=26&gp=0.jpg',
+        'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2957527148,755216491&fm=26&gp=0.jpg'
       ],
       girdItem: []
     }
