@@ -4,32 +4,77 @@
  * @Last Modified by: 吴晓斌
  * @Last Modified time: 2020-12-08 11:02:21
  */
-//食谱列表
+//社区活动
 <template>
   <div class="recipeItemContainer">
-    <van-cell-group>
-      <van-cell title="韭菜碎炒鸡蛋" value="润肠" label="11评论 739人气" size="large" is-link />
-      <van-cell title="菠菜炒坚果" value="美容" label="14评论 722人气" size="large" is-link />
-      <van-cell title="西红柿鸡蛋片汤" value="防癌" label="4评论 21人气" size="large" is-link />
-      <van-cell title="红豆莲子粥" value="强身健体" label="325评论 4144人气" size="large" is-link />
-      <van-cell title="莲藕菌菇大骨汤" value="降血脂" label="0评论 7人气" size="large" is-link />
-      <van-cell title="川贝雪梨" value="开胃" label="3评论 45人气" size="large" is-link />
-      <van-cell title="红油扁豆" value="补血" label="22评论 143人气" size="large" is-link />
-      <van-cell title="青芒果炒虾仁" value="清热去火" label="7评论 452人气" size="large" is-link />
-      <van-cell title="米面烩" value="健脑益智" label="0评论 1人气" size="large" is-link />
-    </van-cell-group>
+    <van-row class="activityListElem">
+      <van-col class="activityNum" span="2">
+        <span class="activityNum_text"></span>
+      </van-col>
+      <van-col class="activityContent" span="22">
+        <van-row class="activity_title">
+          <van-col span="20">构建人类命运共同体</van-col>
+          <van-col span="4" class="activity_check">
+            <van-icon name="eye-o" color="#000" /><span>查看</span>
+          </van-col>
+        </van-row>
+        <van-row class="activity_detail">构建人类命运共同体，关键在行动</van-row>
+      </van-col>
+    </van-row>
   </div>
 </template>
 
 <script>
 import Vue from 'vue'
-import { Icon, Cell, CellGroup } from 'vant'
-Vue.use(Icon).use(Cell).use(CellGroup)
+import { Icon, Cell, CellGroup,Col,Row } from 'vant'
+Vue.use(Icon).use(Cell).use(CellGroup).use(Col).use(Row)
 export default {
 
 }
 </script>
 
 <style lang='scss' scoped>
-
+.activityListElem{
+  width:100%;
+  height:70px;
+  
+}
+.activityNum{
+  height: 100%;
+  background: red;
+  color: white;
+  text-align: center;
+}
+.activityNum_text{
+  line-height: 70px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.activityContent{
+  padding: 10px;
+}
+.activity_title{
+  height: 30px;
+  font-weight: 700;
+  color: rgb(117, 17, 17);
+  font-size: 20px;
+}
+.activity_detail{
+  height: 30px;
+  font-size: 15px;
+  color: rgb(105, 116, 126);
+  margin: 5px 0;
+}
+.activity_check{
+  font-size: 15px;
+  color: rgb(105, 116, 126);
+}
+.van-icon{
+  vertical-align: middle;
+  margin-right: 3px;
+}
+.activity_check span{
+  color: #6d7278;
+  font-size: 13px;
+}
 </style>

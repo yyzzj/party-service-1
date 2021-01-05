@@ -3,11 +3,11 @@
     <div class="healthy_header--container" @click="$router.push('/healthyAsk')">
       <div class="icon_tran">
         <van-icon class-prefix="old-icon" name="shouzhixuanzhong" color="#f6f6f6" size="25" />
-        <span>养生小妙招，一网打尽</span>
+        <span>点击查看</span>
       </div>
     </div>
     <div class="healthy_dite--container">
-      <div class="healthy_dite--title">营养食谱</div>
+      <div class="healthy_dite--title">社区活动</div>
     </div>
     <div>
       <recipe-item />
@@ -194,10 +194,10 @@ export default {
   margin: 20px 10px;
   border-radius: 10px;
   user-select: none;
-  background-image: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1607163547241&di=c95c0a18449496f4df3449739d5e0d9e&imgtype=0&src=http%3A%2F%2Fwww.jk393.com%2Fuploads%2Fallimg%2F180628%2F133F3J12-0.jpg');
-  background-position: center;
+  background-image: url('http://www.qstheory.cn/titlepic/112656/1126561345_1601430194526_title0h.jpg');
+  background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
   color: #f6f6f6;
   font-size: 20px;
   cursor: pointer;
