@@ -1,8 +1,8 @@
 /*
  * @Author: 庞泽邦
  * @Date: 2020-05-02 17:46:36
- * @Last Modified by: 庞泽邦
- * @Last Modified time: 2020-11-18 13:02:10
+ * @Last Modified by: 吴晓斌
+ * @Last Modified time: 2021-01-04 14:40:23
  */
 //选课页面
 <template>
@@ -10,10 +10,10 @@
     <van-sticky :offset-top="0">
       <div class="fix_fixed--container">
         <van-tabs v-model="active" color="#A12831" swipe-threshold="5" animated>
-          <van-tab title="热门精品" />
-          <van-tab title="陶瓷课" />
-          <van-tab title="书法课" />
-          <van-tab title="绘画课" />
+          <van-tab title="党员教育" />
+          <van-tab title="休闲娱乐" />
+          <van-tab title="健康养生" />
+          <van-tab title="传统文化" />
           <van-tab title="更多" />
         </van-tabs>
         <van-tabs v-model="mode" color="#A12831" line-width="0" title-active-color="#A12831">

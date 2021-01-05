@@ -118,8 +118,8 @@ const config = {
           '^/eapi/health': ''
         }
       }
-    },
-    before: require('./mock/mock-server.js')
+    }
+    // before: require('./mock/mock-server.js')
   },
   chainWebpack(config) {
     // 代码最小化

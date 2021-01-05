@@ -1,8 +1,8 @@
 /*
- * @Author: 庞泽邦
- * @Date: 2020-05-01 16:18:12
- * @Last Modified by: 庞泽邦
- * @Last Modified time: 2020-11-17 11:26:07
+ * @Author: 吴晓斌
+ * @Date: 2020-01-04 15:04:27
+ * @Last Modified by: 吴晓斌
+ * @Last Modified time: 2021-01-04 16:15:53
  */
 //学生端首页热门课推荐组件
 <template>
@@ -62,7 +62,7 @@
 
 <script>
 import Vue from 'vue'
-import { Cell, CellGroup, Card, Button, Skeleton, Empty } from 'vant'
+import { Cell, CellGroup, Card, Button, Skeleton, Empty, Tag } from 'vant'
 import { getHot } from '@/api/student/home.js'
 import { jumpToCourseDetail } from '@/mixins'
 Vue.use(Cell)
@@ -71,6 +71,7 @@ Vue.use(Cell)
   .use(Button)
   .use(Skeleton)
   .use(Empty)
+  .use(Tag)
 export default {
   name: 'HotRecommend',
   // 混入跳转到课程详情逻辑
