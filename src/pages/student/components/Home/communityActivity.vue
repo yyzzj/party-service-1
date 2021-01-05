@@ -2,7 +2,7 @@
  * @Author: 吴晓斌
  * @Date: 2020-01-04 15:04:27
  * @Last Modified by: 吴晓斌
- * @Last Modified time: 2021-01-04 17:07:31
+ * @Last Modified time: 2021-01-05 14:43:29
  */
 //学生端首页社区活动组件
 <template>
@@ -16,7 +16,7 @@
         <span class="head_course--value">查看更多</span>
       </template>
     </van-cell>
-    <div v-if="!noData && !error">
+    <div v-if="!noData && !error" class="activityBox">
       <van-grid :border="false" :column-num="2">
         <van-grid-item v-for="(item, index) in activityList" :key="index">
           <div class="picContent__title">{{ item.acName }}</div>
@@ -76,6 +76,10 @@ export default {
     color: #6d7278;
   }
 }
+.activityBox{
+  width: 95%;
+  margin: 0 auto;
+}
 .van-image{
   opacity: 0.8;
   position: relative;
@@ -90,7 +94,7 @@ export default {
   z-index: 1;
   position: absolute;
   color: #fff;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 500;
 }
 

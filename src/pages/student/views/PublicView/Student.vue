@@ -2,7 +2,7 @@
  * @Author: 庞泽邦
  * @Date: 2020-05-01
  * @Last Modified by: 吴晓斌
- * @Last Modified time: 2021-01-04 14:36:21
+ * @Last Modified time: 2021-01-05 16:17:46
  */
 //学生端底部嵌套路由导航栏
 <template>
@@ -26,7 +26,7 @@
             <van-icon slot="icon" class-prefix="old-icon" name="shuji" size="25" />
           </template>
         </van-tabbar-item>
-        <van-tabbar-item to="/healthy">
+        <van-tabbar-item to="/activity">
           <span>活动</span>
           <template #icon>
             <van-icon slot="icon" class-prefix="old-icon" name="fenlei" size="25" />
