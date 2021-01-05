@@ -1,8 +1,8 @@
 /*
  * @Author: 庞泽邦
  * @Date: 2020-05-21 11:25:41
- * @Last Modified by: 庞泽邦
- * @Last Modified time: 2020-09-10 14:58:14
+ * @Last Modified by: 吴晓斌
+ * @Last Modified time: 2021-01-05 10:25:54
  */
 //视频播放组件
 <template>
@@ -53,7 +53,7 @@ export default {
         // eslint-disable-next-line
        this.player = videojs(video, {
           controls: true, // 是否显示控制条
-          poster: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1590046299954&di=ba8cdd8c23a33a07f59d2c82eb50bfe4&imgtype=0&src=http%3A%2F%2Fdiy.yesky.com%2Fimagelist%2F2008%2F245%2Fl1b0j594q0db.jpg', // 视频封面图地址
+          poster: 'http://img95.699pic.com/video_cover/79/40/10/b_DqyUGgv3vXZY1585794010.jpg!/both/317x178', // 视频封面图地址
           preload: 'auto',
           autoplay: false,
           fluid: true, // 自适应宽高
@@ -95,7 +95,7 @@ export default {
             //   type: 'video/mp4'
             // },
             {
-              src: 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4',
+              src: 'https://video.699pic.com/videos/79/40/23/b_3yRDmjbaixNE1585794023_10s.mp4',
               // type必须要与视频源一致否则在ios端会出现无法解析的问题
               type: 'video/mp4'
             }
