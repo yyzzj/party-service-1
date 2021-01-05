@@ -2,7 +2,7 @@
  * @Author: 庞泽邦
  * @Date: 2020-05-02 17:46:36
  * @Last Modified by: 吴晓斌
- * @Last Modified time: 2021-01-04 14:40:23
+ * @Last Modified time: 2021-01-05 15:55:48
  */
 //选课页面
 <template>
@@ -10,6 +10,7 @@
     <van-sticky :offset-top="0">
       <div class="fix_fixed--container">
         <van-tabs v-model="active" color="#A12831" swipe-threshold="5" animated>
+          <van-tab title="热门课程" />
           <van-tab title="党员教育" />
           <van-tab title="休闲娱乐" />
           <van-tab title="健康养生" />
