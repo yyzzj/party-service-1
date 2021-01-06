@@ -6,7 +6,7 @@
 */
 <template>
   <div>
-    <van-nav-bar>
+    <van-nav-bar @click-left="clickLeft">
       <template #left>
         <van-icon name="arrow-left" size="18" color="white" />
       </template>
@@ -24,12 +24,15 @@
           <van-tab title="活动介绍">
             <activity-introduce />
           </van-tab>
-          <van-tab title="活动流程" />
+          <van-tab title="活动流程">
+            <activity-process />
+          </van-tab>
           <van-tab title="负责人简介">
-            <van-skeleton title avatar :row="3" />
             <admin-introduce />
           </van-tab>
-          <van-tab title="活动评价" />
+          <van-tab title="活动评价">
+            <activity-evaluation />
+          </van-tab>
         </van-tabs>
         <div style="height:60px" />
         <div class="submit_wrap--container">
@@ -48,20 +51,26 @@ import ActivityDetailMiddle from '@/pages/student/components/ActivityDetail/Midd
 import ActivityIntroduce from '@/pages/student/components/ActivityDetail/ActivityIntroduce'
 import AdminIntroduce from '@/pages/student/components/ActivityDetail/AdminIntroduce'
 import ActivitySubmit from '@/pages/student/components/ActivityDetail/ActivitySubmit'
-import { NavBar, Icon, Tab, Tabs, Empty, Skeleton } from 'vant'
+import ActivityProcess from '@/pages/student/components/ActivityDetail/ActivityProcess'
+import ActivityEvaluation from '@/pages/student/components/ActivityDetail/ActivityEvaluation'
+import { NavBar, Icon, Tab, Tabs, Empty, Skeleton, Step, Steps } from 'vant'
 Vue.use(NavBar)
   .use(Icon)
   .use(Tab)
   .use(Tabs)
   .use(Empty)
   .use(Skeleton)
+  .use(Step)
+  .use(Steps)
 export default {
   name: 'ActivityDetail',
   components: {
     ActivityDetailMiddle,
     ActivityIntroduce,
     AdminIntroduce,
-    ActivitySubmit
+    ActivitySubmit,
+    ActivityProcess,
+    ActivityEvaluation
   },
   data() {
     return {
