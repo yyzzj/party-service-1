@@ -34,6 +34,14 @@
           <div class="gird_item--text">课堂进度</div>
         </template>
       </van-grid-item>
+      <van-grid-item @click.stop="changeView('/myActivity')">
+        <template #icon>
+          <van-icon slot="icon" class-prefix="old-icon" name="fenlei" size="30" />
+        </template>
+        <template #text>
+          <div class="gird_item--text">我的活动</div>
+        </template>
+      </van-grid-item>
       <van-grid-item @click.stop="changeView('/healthyAsk')">
         <template #icon>
           <van-icon slot="icon" class-prefix="old-icon" name="chabei" size="30" />

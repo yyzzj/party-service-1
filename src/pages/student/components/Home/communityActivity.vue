@@ -2,7 +2,7 @@
  * @Author: 吴晓斌
  * @Date: 2020-01-04 15:04:27
  * @Last Modified by: 吴晓斌
- * @Last Modified time: 2021-01-05 14:43:29
+ * @Last Modified time: 2021-01-06 09:39:33
  */
 //学生端首页社区活动组件
 <template>
@@ -18,9 +18,9 @@
     </van-cell>
     <div v-if="!noData && !error" class="activityBox">
       <van-grid :border="false" :column-num="2">
-        <van-grid-item v-for="(item, index) in activityList" :key="index">
-          <div class="picContent__title">{{ item.acName }}</div>
-          <van-image :src="item.acPicUrl" fit="cover" height="150" />
+        <van-grid-item v-for="(item, index) in activityList" :key="index" @click="toActivityDetail(item.id)">
+          <div class="picContent__title">{{ item.title }}</div>
+          <van-image :src="item.pic" fit="cover" height="150" />
         </van-grid-item>
       </van-grid>
     </div>
@@ -48,12 +48,16 @@ export default {
       error: false, // 是否网络错误
       activityList: [
         {
-          acName: '社区卫生清洁活动',
-          acPicUrl: 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1507047492,2245874742&fm=26&gp=0.jpg'
+          id: 156,
+          title: '社区卫生清洁活动',
+          pic: 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1507047492,2245874742&fm=26&gp=0.jpg',
+          detail: ''
         },
         {
-          acName: '社区温馨家访活动',
-          acPicUrl: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1403941441,3620010516&fm=26&gp=0.jpg'
+          id: 157,
+          title: '社区温馨家访活动',
+          pic: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1403941441,3620010516&fm=26&gp=0.jpg',
+          detail: ''
         }
       ]
     }
@@ -61,6 +65,14 @@ export default {
   created() {
   },
   methods: {
+    toActivityDetail(activityId) {
+      this.$router.push({
+        path: '/activityDetail',
+        query: {
+          activityId
+        }
+      }).catch(() => { })
+    }
   }
 }
 </script>
