@@ -45,7 +45,7 @@ const routes = [{
   name: 'courseDetail',
   component: () => import ('../views/Course/CourseDetail.vue')
 }, {
-  // 活动详情
+  // 活动详情页
   path: '/activityDetail',
   name: 'activityDetail',
   component: () => import ('../views/Activity/ActivityDetail.vue')
@@ -112,6 +112,11 @@ const routes = [{
   path: '/dailyTask',
   name: 'dailyTask',
   component: () => import ('../views/Mission/DailyTask.vue')
+}, {
+  // 我的活动页面
+  path: '/myActivity',
+  name: 'myActivity',
+  component: () => import ('../views/MyActivity/MyActivity.vue')
 }, {
   // 个人设置页面
   path: '/settingCenter',
@@ -203,7 +208,7 @@ const router = createRouter()
 
 router.beforeEach((to, from, next) => {
   // 前往登录页自己就放行
-  const routerCsp = ['/old/', '/login', '/register', '/forget', '/home', '/select', '/activity', '/courseDetail', '/homesearch', '/searchResult']
+  const routerCsp = ['/old/', '/login', '/register', '/forget', '/home', '/select', '/activity', '/courseDetail', '/activityDetail', '/homesearch', '/searchResult']
   if (routerCsp.includes(to.path)) {
     // 路由白名单直接放行
     next()

@@ -2,23 +2,23 @@
  * @Author: 庞泽邦
  * @Date: 2020-05-01
  * @Last Modified by: 吴晓斌
- * @Last Modified time: 2021-01-04 16:57:21
+ * @Last Modified time: 2021-01-06 10:11:56
  */
 //学生端首页页面
 <template>
   <div class="student_home--container">
     <van-sticky class="van-sticky--fixed">
       <van-row class="home_header--container" type="flex" justify="center" align="center">
-        <van-col span="6">
+        <van-col span="8">
           <div class="home_header--title">社区服务站</div>
         </van-col>
-        <van-col span="18">
+        <van-col span="16">
           <div class="home_header--search">
             <div class="search_wrap--container">
               <div class="search_icon--container">
                 <van-icon name="search" color="#E2BBBC" size="20px" />
               </div>
-              <div class="search_font--container" @click="gosearch">请输入感兴趣的课程名称</div>
+              <div class="search_font--container" @click="gosearch">点我搜索课程或活动 ~</div>
             </div>
           </div>
         </van-col>
@@ -37,7 +37,7 @@
       mode="closeable"
       background="#fff"
       color="#A12831"
-    >社区公告：这是一条测试公告...</van-notice-bar>
+    >社区公告：祝各位业主牛年快乐，牛气冲天！!</van-notice-bar>
     <community-service />
     <community-activity />
     <hot-recommend />
