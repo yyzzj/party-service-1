@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import { getToken } from '@/utils/auth'
+import {getToken} from '@/utils/auth'
 
 Vue.use(VueRouter)
 
@@ -90,6 +90,11 @@ const routes = [
     path: '/orderDetail',
     name: 'orderDetail',
     component: () => import ('../views/Order/OrderDetail.vue')
+  }, {
+    // 诊断回复页面
+    path: '/replyHealthyAsk',
+    name: 'replyHealthyAsk',
+    component: () => import('../views/ReplyHealthyAsk/Index.vue')
   }, {
     // 养生问答
     path: '/healthyAsk',

@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import { getToken } from '@/utils/auth'
-import { Toast } from 'vant'
+import {getToken} from '@/utils/auth'
+import {Toast} from 'vant'
 
 Vue.use(VueRouter)
 
@@ -117,6 +117,11 @@ const routes = [{
   path: '/myActivity',
   name: 'myActivity',
   component: () => import ('../views/MyActivity/MyActivity.vue')
+}, {
+  // 在线问诊页面
+  path: '/askHealthy',
+  name: 'askHealthy',
+  component: () => import ('../views/AskHealthy/AskHealthy.vue')
 }, {
   // 个人设置页面
   path: '/settingCenter',

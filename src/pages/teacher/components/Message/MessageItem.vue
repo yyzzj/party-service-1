@@ -1,8 +1,8 @@
 /*
  * @Author: 庞泽邦
  * @Date: 2020-09-07 10:49:14
- * @Last Modified by: 庞泽邦
- * @Last Modified time: 2020-09-07 11:19:12
+ * @Last Modified by: 杨志杰
+ * @Last Modified time: 2021-01-07 11:00:01
  */
 // 教师端消息页面信息条组件
 
@@ -24,6 +24,33 @@
                 <div class="cell_title">系统公告 </div>
                 <div class="cell_desc">
                   <span>你被封号了哟 </span>
+                </div>
+              </template>
+              <template #default>
+                <div class="cell_num"> 1 </div>
+              </template>
+            </van-cell>
+          </van-col>
+        </van-row>
+        <template #right>
+          <van-button square color="#A12831" text="删除" class="swipeCell_button--container" />
+        </template>
+      </van-swipe-cell>
+      <van-swipe-cell>
+        <van-row type="flex" justify="end">
+          <van-col span="4">
+            <div class="avatar_wrap--container">
+              <svg class="icon" aria-hidden="true">
+                <use xlink:href="#old-icon-gonggao" />
+              </svg>
+            </div>
+          </van-col>
+          <van-col span="20">
+            <van-cell center style="height:100%">
+              <template #title>
+                <div class="cell_title">头昏脑胀是怎么回事？ </div>
+                <div class="cell_desc">
+                  <span>昨天上吐下泻头昏脑胀[照片]是怎么回事？ </span>
                 </div>
               </template>
               <template #default>
